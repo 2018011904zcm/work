@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: '微软雅黑';
+        }
+        
+         ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        #bs-1 ul li a:hover {
+            color: #cb5405 !important;
+            border-bottom: 3px #cb5405 solid;
+        }
+        
+        .hidephone {
+            display: none;
+        }
+        
+        @media screen and (min-width: 1000px) {
+            body {
+                background-color: #dddddd;
+            }
+            .bigback {
+                background: url(img/back.png) no-repeat;
+                background-position: 50% 20%;
+            }
+            #bs-1 ul li a {
+                color: black!important;
+                font-size: 20px;
+                margin-right: 74px;
+            }
+            #bs-1 ul li a:hover {
+                color: #cb5405 !important;
+                border-bottom: 2px #cb5405 solid;
+            }
+            .wordsize {
+                height: 46px;
+                font-size: 20px;
+                color: white;
+                line-height: 46px;
+                font-weight: lighter;
+                display: inline-block;
+            }
+            .sizeA {
+                margin-bottom: 5px;
+            }
+            .sizeB {
+                margin-left: 5px;
+            }
+            .pad {
+                padding-left: 40px;
+                padding-top: 10px;
+            }
+            .bottom {
+                position: absolute;
+                bottom: 0;
+            }
+            .boxsize {
+                background-color: black;
+                color: white;
+                font-size: 20px;
+                font-weight: lighter;
+                height: 88px;
+            }
+            .bgcircle {
+                background: url(img/rorate.png) no-repeat;
+                background-position: 50% 25%;
+                background-color: #1c5080;
+                height: 400px;
+                text-align: center;
+                padding-top: 96px;
+                color: white;
+            }
+            .mowei {
+                margin-bottom: 10px;
+            }
+            .wenben {
+                line-height: 25px;
+                text-align: left;
+            }
+            .datubiao {
+                padding-left: 75px;
+            }
+            .form-control {
+                border-radius: 0;
+                margin-right: -5px;
+                height: 50px;
+            }
+            .btn-change {
+                border-radius: 0;
+                margin-right: -5px;
+                height: 50px;
+                color: #7d7d7f;
+                text-align: center;
+                line-height: 35px;
+            }
+            .navbg {
+                background-color: #e1e1e1;
+            }
+        }
+        
+        @media screen and (max-width: 1000px) {
+            body {
+                background-color: #ffffff;
+            }
+            .get {
+                display: block;
+            }
+            .clean {
+                display: none;
+            }
+            .threeBorder {
+                border-bottom: 2px #e8e8e8 solid;
+            }
+            .bgn {
+                background: url(img/back.png) no-repeat;
+                background-position: center top;
+                background-size: contain;
+            }
+            .bigborder {
+                border-top: 20px #f5f5f5 solid;
+            }
+            .bottom {
+                position: absolute;
+                bottom: 0px;
+            }
+            .form-change {
+                border-radius: 0;
+                margin-right: -4px;
+                height: 66px;
+                border: 0px;
+            }
+            .btn-change {
+                border-radius: 0;
+                margin-right: -4px;
+                height: 66px;
+                color: #7d7d7f;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <div class="row clean" style="background-color: black;padding-top: 8px;padding-bottom: 8px;">
+            <div class="col-md-4  col-md-offset-8">
+                <div class="row">
+                    <div class="col-md-6 row">
+                        <div class="col-md-2">
+                            <img src="img/tell.png" alt="">
+                        </div>
+                        <div class="col-md-10" style="color: white;line-height: 26px;font-size: 20px;">
+                            400-808-8682
+                        </div>
+                    </div>
+                    <div class="col-md-6 row" style="line-height: 26px;">
+                        <a href="#" style="color: white;font-size: 12px">请登录</a>
+                        <span style="margin-left: 14px;margin-right: 14px; color: white;">|</span>
+                        <a href="#" style="color: white;font-size: 12px">注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row navbg" style=" height: 80px;padding-top: 15px;">
+            <div class="col-md-1 col-md-offset-1 clean" style="margin-right: 154px;">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="col-md-7 col-xs-12">
+                <nav class="navbar navbar-default navbg" style=" border: none;">
+                    <div class="container-fluid">
+                        <div class="navbar-header" style="background-color: white;">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-1" style="height:80px; border: none;">
+                                  <span class="sr-only">导航开关</span>
+                                  <span class="icon-bar" style="width: 44px;height: 4px;margin-bottom: 16px;background-color: black;"></span>
+                                  <span class="icon-bar" style="width: 44px;height: 4px;margin-bottom: 16px;background-color: black;"></span>
+                                  <span class="icon-bar" style="width: 44px;height: 4px;background-color: black;"></span>
+                            </button>
+                            <img src="img/logo.png" class="navbar-brand hidephone get" style="height: 90px;">
+                            <button type="button" class="btn hidephone get" style="height: 54px; width: 164px; background-color: #e8420a;font-size: 28px;color: white;font-weight: lighter; position: absolute; right: 120px;top: 22px;">
+                                快速定制    
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-1">
+                            <ul class="nav navbar-nav">
+                                <li style="height: 46px;"><a href="#">首页</a></li>
+                                <li style="height: 46px;"><a href="#">热门路线</a></li>
+                                <li style="height: 46px;"><a href="#">签证推荐</a></li>
+                                <li style="height: 46px;"><a href="#">使命愿景</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row clean" style="height: 450px;  background: url(img/banner.jpg) no-repeat ; background-size: 100% 100%;padding-top: 70px;">
+            <div class="col-md-7 col-md-offset-1 datubiao">
+                <div class="row">
+                    <div class="col-md-12" style="margin-bottom: 20px;">
+                        <p style="font-size: 48px; color: white;font-weight: lighter;">
+                            悠游古欧洲 遍览德法瑞意
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-5 wordsize" style="border-top: 1px #666568 solid;">
+                                巴黎卢浮宫、塞纳河游船、凡尔赛宫
+                            </div>
+                            <div class="col-md-12"></div>
+                            <div class="col-md-6 wordsize" style="border-bottom: 1px  #666568 solid;">
+                                少女峰、大运河游船、金色列车，西庸城堡
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" style="height: 70px;">
+
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-3" style="padding-left: 70px; ">
+                        <form class="form-inline" action="#" method="POST">
+                            <div class="form-group" style="border: 3px black solid;border-radius: 5px;">
+                                <button type="button" class="btn btn-change" style="width:160px;background: url(img/position.png) no-repeat; background-position: 15% 50%;background-color: #d3d3d8;font-size: 18px;">
+                                    <p >目的地</p>
+                                </button>
+                                <input type="text" class="form-control" placeholder="| &nbsp;日本 &nbsp; &nbsp;美国 &nbsp;&nbsp;英国 &nbsp;&nbsp;地中海" style=" width: 300px;">
+                                <button type="submit" class="btn btn-change" style="width:130px;background: url(img/search.png) no-repeat;background-position: 50% 50%;background-color: #cb5405;border-top-right-radius:5px;border-bottom-right-radius:5px;border-right: 3px black solid;">
+                                
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row hidephone get" style="background: url(img/banner.jpg) no-repeat;height: 366px;background-size: 100% 100%;">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="row" style="padding-top: 62px;">
+                    <div class="col-xs-12" style="font-size: 40px;color: white;font-weight: lighter;">
+                        悠游古欧洲 &nbsp; 遍览德法瑞意
+                    </div>
+                    <div class="col-xs-12" style="height: 26px;"></div>
+                    <div class="col-xs-12" style="font-size: 28px; color: white;font-weight: lighter;">
+                        全程升级热早+1晚5星酒店
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12" style="height: 75px;"></div>
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <form class="form-inline" action="#" method="POST">
+                            <div class="form-group" style="border: 4px rgba(0, 0, 0, 0.6) solid; border-radius: 6px;">
+                                <button class=" btn btn-change " type="button " style="width:148px;font-size: 20px;background: url(img/position.png) no-repeat; background-position: 15% 50%;background-color: #f2f3f7;padding-left: 45px; ">
+                                    目的地
+                                </button>
+                                <input type="text" class="form-change btn" placeholder=" | &nbsp;日本 &nbsp; &nbsp;美国 &nbsp;&nbsp;英国 &nbsp;&nbsp;地中海" style="width: 300px;padding-left: 0px;font-size: 20px; color: #e7e7e7;">
+                                <button class="btn btn-change " type="submit " style="width: 148px; background: url(img/search.png) no-repeat; background-position: 50% 50%;background-color: #e8420a; "></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clean ">
+            <p style="height: 30px; "></p>
+            <div class="col-md-10 col-md-offset-1 ">
+                <div class="row ">
+                    <div class="col-md-9 " style=" background:url(img/sbanner2.jpg) no-repeat;background-size: cover; height: 364px; ">
+                        <div class="col-md-6 col-md-offset-7 ">
+                            <br>
+                            <div class="h1 " style="color: #e1e1e1; ">
+                                机场接送 省钱省心
+                            </div>
+
+                            <p style="color: #e1e1e1;font-size: 18px;font-weight: lighter;margin-top: 18px; ">
+                                提供上海、苏州、无锡各市 <br>往返机场、码头接送服务，更有包车服务
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 " style="background-color: #14316d; color: white;height: 364px;text-align: center; ">
+                        <img src="img/car.png " style="margin-top: 80px;margin-bottom: 8px; ">
+                        <p style="font-size: 26px; margin-bottom: 52px; ">车辆接送</p>
+                        <button type="button " class="btn btn-default " style="width: 178px;font-size: 23px;color: white;background-color: #14316d; ">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+                <div class="row " style="height: 135px;padding-top: 28px;text-align: center; ">
+                    <p style="font-size: 36px; color: black; letter-spacing: 24px;font-weight: lighter; ">热门路线</p>
+                    <p style="font-size: 18px; color: black;text-align: center; ">Popular tourist routes</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hidephone get bigborder ">
+            <div class="col-xs-10 col-xs-offset-1 ">
+                <div class="row ">
+                    <div class="col-xs-2 " style="height: 200px;line-height: 200px;padding-left: 0px; ">
+                        <img src="img/carH.png " alt=" ">
+                    </div>
+                    <div class="col-xs-8 " style="padding-top: 46px; ">
+                        <p style="font-size: 30px ;color: #1c5080; ">机场接送 省心省力</p>
+                        <P style="font-size: 22px; color: #a3a3a3; ">提供上海、苏州、无锡各市<br> 往返机场、码头接送服务，更有包车服务
+                        </P>
+                    </div>
+                    <div class="col-xs-2 " style="line-height: 200px; ">
+                        <button type="button " class="btn btn-default " style="width: 150px;font-size: 28px;color: #adadad; ">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row hidephone get bigborder ">
+            <div class="col-xs-10 col-xs-offset-1 hidephone get " style="height: 108px;padding-left: 0px;padding-top: 50px; ">
+                <span style="font-size:30px ;color:#e8420a ">|</span>
+                <span style="font-size: 30px; ">热门线路</span>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1 clean ">
+                <div class="row ">
+                    <div class="col-md-6 ">
+                        <div class="row ">
+                            <div class=" col-md-12 sizeA " style="background: url(img/hot1.jpg) no-repeat; background-size: 100% 100%; height: 490px; ">
+                                <div class="row ">
+                                    <div class="col-md-12 bottom ">
+                                        <div class="row pad boxsize ">
+                                            <div class="col-md-12 ">
+                                                海南三亚5天4晚，纯玩、4晚红树林度假王国
+                                            </div>
+                                            <div class="col-md-12 ">
+                                                <span style="font-size: 30px; ">¥2580</span>／人起
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class=" col-md-12 " style="background: url(img/hot2.jpg) no-repeat; background-size: 100% 100%;height: 526px; ">
+                                <div class="row ">
+                                    <div class="col-md-12 bottom ">
+                                        <div class="row pad boxsize ">
+                                            <div class="col-md-12 ">
+                                                德法意瑞欧洲4国，ABCD任意线路由您挑选
+                                            </div>
+                                            <div class="col-md-12 ">
+                                                <span style="font-size: 30px; ">¥7999</span>／人起
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="row ">
+                            <div class="col-md-12 sizeA sizeB " style="background: url(img/hot3.jpg) no-repeat; background-size: 100% 100%; height: 290px; ">
+                                <div class="row ">
+                                    <div class="col-md-12 bottom ">
+                                        <div class="row pad boxsize " style="background-color: rgba(0, 0, 0, 0.5); ">
+                                            <div class="col-md-12 ">
+                                                曼谷+芭提雅 国际五星，赠送2220大礼包，绝无自费
+                                            </div>
+                                            <div class="col-md-12 ">
+                                                <span style="font-size: 30px; ">¥2799</span>／人起
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 sizeA sizeB " style="background: url(img/hot4.jpg) no-repeat; background-size: 100% 100%;height: 356px; ">
+                                <div class="row ">
+                                    <div class="col-md-12 bottom ">
+                                        <div class="row pad boxsize " style="background-color: rgba(0, 0, 0, 0.5); ">
+                                            <div class="col-md-12 ">
+                                                日本本州游 樱花、寿司、温泉、美食
+                                            </div>
+                                            <div class="col-md-12 ">
+                                                <span style="font-size: 30px; ">¥5399</span>/人起
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 sizeB " style="background: url(img/hot5.jpg) no-repeat; background-size: 100% 100%; height: 365px; ">
+                                <div class="row ">
+                                    <div class="col-md-12 bottom ">
+                                        <div class="row pad boxsize " style="background-color: rgba(0, 0, 0, 0.5); ">
+                                            <div class="col-md-12 ">
+                                                斯里兰卡7天6晚全景游 保证入住2晚香格里拉
+                                            </div>
+                                            <div class="col-md-12 ">
+                                                <span style="font-size: 30px; ">¥7999</span>/人起
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row ">
+
+                </div>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 hidephone get ">
+                <div class="row " style="border-top: 1px #e8e8e8 solid; ">
+                    <div class="col-xs-12 " style="height: 398px;background: url(img/hot1.jpg) no-repeat;background-size: 100% 100%;margin-top: 18px; ">
+                        <div class="row ">
+                            <div class="col-xs-12 bottom ">
+                                <div class="row " style=" color: white;background-color: rgba(0, 0, 0, 0.8); ">
+                                    <div class="col-xs-8 " style="font-size: 26px;height: 110px;padding-top: 22px; ">
+                                        海南三亚5天4晚<br> 纯玩、4晚红树林度假王国
+                                    </div>
+                                    <div class="col-xs-4 " style="text-align: center;height: 110px; padding-top: 30px; ">
+                                        <span style="font-size: 20px; ">¥</span>
+                                        <span style="font-size: 40px; ">2580</span>
+                                        <span style="font-size:20px; ">／人起</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row " style="height: 22px; ">
+
+                </div>
+                <div class="row ">
+                    <div class="col-xs-12 " style="height: 398px;background: url(img/hot2.jpg) no-repeat;background-size: 100% 100%; ">
+                        <div class="row ">
+                            <div class="col-xs-12 bottom ">
+                                <div class="row " style=" color: white;background-color: rgba(0, 0, 0, 0.8); ">
+                                    <div class="col-xs-8 " style="font-size: 26px;height: 110px;padding-top: 22px; ">
+                                        德法意瑞欧洲4国<br> ABCD任意线路由您挑选
+                                    </div>
+                                    <div class="col-xs-4 " style="text-align: center;height: 110px; padding-top: 30px; ">
+                                        <span style="font-size: 20px; ">¥</span>
+                                        <span style="font-size: 40px; ">7999</span>
+                                        <span style="font-size:20px; ">／人起</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row " style="height: 38px; ">
+
+                </div>
+                <div class="row ">
+                    <div class="col-xs-12 " style="text-align: center; margin-bottom: 24px; ">
+                        <button type="button " class="btn btn-default " style="height: 52px; width: 224px;font-size: 26px;color: #8f8f8f;border-radius: 6px; ">
+                            <p style="display: inline-block; ">查看更多</p> <img src="img/hotR.png " style="width: 12px; " >
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row bigborder ">
+            <div class="col-md-12 bigback clean " style="height: 168px;text-align: center;padding-top: 50px; ">
+                <p style="font-size: 36px; ">
+                    使命与愿景
+                    <br>
+                    <span style="font-size: 16px; ">让旅游回归本质，体验纯粹旅游</span>
+                </p>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 hidephone get " style="height: 108px;padding-left: 0px;padding-top: 50px; ">
+                <span style="font-size:30px ;color:#e8420a ">|</span>
+                <span style="font-size: 30px; ">使命与愿景：</span>
+                <span style="font-size: 24px; ">让旅游回归本质，体验纯粹旅游</span>
+            </div>
+        </div>
+        <div class="row bgn ">
+            <div class="col-md-10 col-md-offset-1 clean ">
+                <div class="row ">
+                    <div class="col-md-5 " style="background: url(img/mission1.jpg) no-repeat; background-size: cover;height: 350px; ">
+                    </div>
+                    <div class="col-md-7 " style="background-color: #1c5080;color: white; padding-top: 82px;padding-left: 94px;padding-right: 94px;height: 350px; ">
+                        <p style="font-size: 26px;text-align: center; ">服务理念及优势</p>
+                        <p class="text-left " style="font-size: 16px;margin-top: 44px;line-height: 40px; ">
+                            英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 hidephone get ">
+                <div class="row ">
+                    <div class="col-xs-12 " style="height: 48px;border-top: 1px #e8e8e8 solid; "></div>
+                    <div class="col-xs-12 " style=" height: 328px; background: url(img/mission1.jpg) no-repeat; background-size: 100% 100%; ">
+                    </div>
+                    <div class="col-xs-12 " style="height: 280px;margin-top: 70px; ">
+                        <p style="font-size:30px;text-align: center; ">--服务理念--</p>
+                        <p style="font-size: 22px;margin-top: 36px;line-height: 40px; ">“英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1 clean " style="height: 471px; background: url(img/mission2.jpg) no-repeat; background-size: 100% 100%;margin-top: 5px; ">
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 hidephone get " style="height:320px;background:url(img/mission2.jpg) no-repeat ; background-size: 100% 100%; "></div>
+        </div>
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1 clean " style="margin-top: 5px; ">
+                <div class="row ">
+                    <div class="col-md-4 col-xs-12 bgcircle ">
+                        <div class="row ">
+                            <div class="col-md-12 col-xs-4 ">
+                                <img src="img/icon1.png " alt=" ">
+                                <p style="height: 10px; " class="clean "></p>
+                            </div>
+                            <div class="col-md-12 col-xs-8 ">
+                                <p style="font-size: 20px; ">品质旅程</p>
+                                <p style="font-size: 16px;margin-top: 86px; ">
+                                    旅游达人精心设计、基于口碑反复打磨，
+                                    <br> 全网最好，敢跟任何产品比 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 bgcircle ">
+                        <div class="row ">
+                            <div class="col-md-12 ">
+                                <img src="img/icon2.png " alt=" ">
+                                <p></p>
+                            </div>
+                            <div class="col-md-12 ">
+                                <p style="font-size: 20px; ">品质消费</p>
+                                <p style="font-size: 16px;margin-top: 86px; ">
+                                    不推自费
+                                    <br> 不进垃圾购物店和伪景点
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 bgcircle ">
+                        <div class="row ">
+                            <div class="col-md-12 ">
+                                <img src="img/icon3.png " alt=" ">
+                                <p style="height: 10px; "></p>
+                            </div>
+                            <div class="col-md-12 ">
+                                <p style="font-size: 20px; ">品质小团</p>
+                                <p style="font-size: 16px;margin-top: 86px; ">
+                                    独立成团不散拼，
+                                    <br>只跟亲朋好友一起玩，每天发团
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 hidephone get ">
+                <div class="row ">
+                    <div class="col-xs-12 " style="text-align: center; height: 120px;font-size: 30px; padding-top: 66px; ">
+                        <p>--服务优势--</p>
+                    </div>
+                    <div class="col-xs-12 ">
+                        <div class="row threeBorder ">
+                            <div class="col-xs-4 " style=" height: 190px; background: url(img/icon11.png) no-repeat; background-position: 50% 50% ">
+                            </div>
+                            <div class="col-xs-8 " style="padding-top:56px; ">
+                                <p style="font-size: 22px; text-align: left; ">旅游达人精心设计、基于口碑反复打磨，<br> 告别人山人海鸡肋景点。
+                                    <br> 全网最好，敢跟任何产品比
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row threeBorder ">
+                            <div class="col-xs-4 " style=" height: 190px; background: url(img/icon22.png) no-repeat; background-position: 50% 50% ">
+                            </div>
+                            <div class="col-xs-8 " style="padding-top:70px; ">
+                                <p style="font-size: 22px; text-align: left; ">不推自费，<br> 不进垃圾购物店和伪景点
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row threeBorder ">
+                            <div class="col-xs-4 " style=" height: 190px; background: url(img/icon33.png) no-repeat; background-position: 50% 50% ">
+                            </div>
+                            <div class="col-xs-8 " style="padding-top:70px; ">
+                                <p style="font-size: 22px; text-align: left; ">独立成团不散拼，<br> 只跟亲朋好友一起玩，每天发团
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row clean " style="background-color: black;border-bottom: 1px #bfbfbf solid; ">
+            <div class="col-md-10 col-md-offset-1 ">
+                <div class="row " style="color: #bfbfbf;padding-top: 46px; height: 368px; ">
+                    <div class="col-md-12 " style="margin-bottom: 40px; ">
+                        <div class="row ">
+                            <div class="col-md-1 " style="font-size: 18px; ">
+                                <p>合作伙伴</p>
+                            </div>
+                            <div class="col-md-10 ">
+                                <ul class="list-inline " style="font-size: 14px; ">
+
+                                    <li>
+                                        <img src="img/xiecheng.png " alt=" ">
+                                        <p></p>
+                                        <p style="text-align: center; ">携程网</p>
+                                    </li>
+                                    <li>
+                                        <img src="img/feizhu.png " alt=" ">
+                                        <p></p>
+                                        <p style="text-align: center; ">阿里飞猪</p>
+                                    </li>
+                                    <li>
+                                        <img src="img/quna.png " alt=" ">
+                                        <p></p>
+                                        <p style="text-align: center; ">去哪儿</p>
+                                    </li>
+                                    <li>
+                                        <img src="img/suzhou.png " alt=" ">
+                                        <p></p>
+                                        <p style="text-align: center; ">苏州旅游局</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 mowei ">
+                        <div class="row ">
+                            <div class="col-md-1 " style="font-size: 18px; ">
+                                热门位置
+                            </div>
+                            <div class="col-md-11 " style="font-size: 14px; ">
+                                <p class="wenben ">韩国 日本 菲律宾 越南 老挝 柬埔寨 泰国 马来西亚 新加坡 印度尼西亚 印度 斯里兰卡 土耳其 阿联酋 西班牙 意大利 希腊 法国 比利时 荷兰 英国 瑞士 奥地利 德国 匈牙利 俄罗斯 捷克 芬兰 葡萄牙 冰岛 美国 加拿大 巴西 阿根廷 澳大利亚 新西兰
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mowei ">
+                        <div class="row ">
+                            <div class="col-md-1 " style="font-size: 18px; ">
+                                主题服务
+                            </div>
+                            <div class="col-md-11 " style="font-size: 14px; ">
+                                <p class="wenben ">海岛度假 历史文化 探索冒险 美食购物 都市生活 海外游学 邮轮度假 蜜月摄影 亲子乐园
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="row ">
+                            <div class="col-md-1 " style="font-size: 18px; ">
+                                友情链接
+                            </div>
+                            <div class="col-md-11 " style="font-size: 14px; ">
+                                <p class="wenben ">马蜂窝 穷游 booking 苏州旅游局 驴友网 吾爱全球签证中心 酒店团购 携程旅游攻略 天巡职航在线 满天飞旅游网 中国旅游网 澳乐网 背包兔旅游行程 出境旅游 国际酒店 广州旅行社 出境旅游 517旅行 花生游 家园网 海外婚礼
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="background-color: black; ">
+            <div class="col-md-4 col-md-offset-4 " style="height: 160px;padding-top: 44px; text-align: center; color: white; ">
+                <P class="clean">2020 @苏州英华国际旅游有限公司 版权所有</P>
+
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 hidephone get" style="height:332px;text-align: center; color: white;font-size: 22px;">
+                <p style="line-height: 50px; ">苏ICP备号、2020<br> @苏州英华国际旅游有限公司 版权所有<br> 技术支持 杭州科技</p>
+            </div>
+        </div>
+
+
+
+
+
+
+</body>
+<script>
+    var wenben = document.getElementsByClassName('wenben');
+    var help;
+    for (let i = 0; i < wenben.length; i++) {
+        help = wenben[i].innerHTML;
+        help = help.replace(/\s+/g, "&nbsp; &nbsp; ")
+        wenben[i].innerHTML = help;
+    }
+</script>
+
+</html>
